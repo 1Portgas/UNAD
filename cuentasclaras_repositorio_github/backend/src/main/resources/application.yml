@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: cuentasclaras-api
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/cuentasclaras_prod}
+    username: ${SPRING_DATASOURCE_USERNAME:admin_cuentas}
+    password: ${SPRING_DATASOURCE_PASSWORD:SecretPasswordUNAD2026!}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+jwt:
+  secret: ${JWT_SECRET:cXVpbnRvX3Byb3llY3RvX2dyYWRvX3VuYWRfc3lzdGVtXzIwMjZfc2VjdXJlX2tleQ==}
+  expiration: 28800000
+
+server:
+  port: 8080
